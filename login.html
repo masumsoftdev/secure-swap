@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .role-selector {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .role-selector button {
+      flex: 1;
+      padding: 10px;
+      margin: 0 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background: #f4f4f9;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .role-selector button.active {
+      background: orange;
+      color: white;
+      border: none;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .login-form label {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .login-form button {
+      padding: 10px;
+      background: orange;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-form button:hover {
+      background: #1e4fb8;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .signup-link a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .signup-link a:hover {
+      color: #1e4fb8;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <div class="role-selector">
+      <button id="buyer-btn" class="active">Buyer</button>
+      <button id="vendor-btn">Vendor</button>
+    </div>
+    <form class="login-form" id="login-form">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="signup-link">
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Role selector buttons
+    const buyerBtn = document.getElementById("buyer-btn");
+    const vendorBtn = document.getElementById("vendor-btn");
+    const loginForm = document.getElementById("login-form");
+
+    buyerBtn.addEventListener("click", () => {
+      buyerBtn.classList.add("active");
+      vendorBtn.classList.remove("active");
+      loginForm.dataset.role = "buyer";
+    });
+
+    vendorBtn.addEventListener("click", () => {
+      vendorBtn.classList.add("active");
+      buyerBtn.classList.remove("active");
+      loginForm.dataset.role = "vendor";
+    });
+
+    // Form submission (example)
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const role = loginForm.dataset.role || "buyer"; // Default to buyer
+      console.log(`Role: ${role}, Email: ${email}, Password: ${password}`);
+      alert(`Logged in as ${role}`);
+    });
+  </script>
+</body>
+</html>

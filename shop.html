@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 15px;
+    }
+
+    .product-details h3 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .product-details p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background: orange;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background: #1e4fb8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Shop Our Products</h1>
+    <div class="shop-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/elegant-handbag-white-background_1203-7753.jpg" alt="Handbag">
+        <div class="product-details">
+          <h3>Elegant Handbag</h3>
+          <p>Stylish handbag for every occasion.</p>
+          <span class="price">$49</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/black-sports-shoes-white-background_1203-8594.jpg" alt="Sports Shoes">
+        <div class="product-details">
+          <h3>Sports Shoes</h3>
+          <p>Lightweight shoes for sports activities.</p>
+          <span class="price">$79</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/fashion-sunglasses-white-background_1203-7147.jpg" alt="Sunglasses">
+        <div class="product-details">
+          <h3>Fashion Sunglasses</h3>
+          <p>Protect your eyes in style.</p>
+          <span class="price">$29</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/elegant-watch_1203-6488.jpg" alt="Watch">
+        <div class="product-details">
+          <h3>Elegant Watch</h3>
+          <p>Classic design for sophistication.</p>
+          <span class="price">$119</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 5 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/electronic-gadget_1203-8789.jpg" alt="Smartphone">
+        <div class="product-details">
+          <h3>Smartphone</h3>
+          <p>Latest model with cutting-edge technology.</p>
+          <span class="price">$699</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 6 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/wireless-headphones_1203-8683.jpg" alt="Headphones">
+        <div class="product-details">
+          <h3>Wireless Headphones</h3>
+          <p>Enjoy music with crystal-clear sound.</p>
+          <span class="price">$59</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 7 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/modern-backpack-white-background_1203-6648.jpg" alt="Backpack">
+        <div class="product-details">
+          <h3>Modern Backpack</h3>
+          <p>Spacious and trendy design for daily use.</p>
+          <span class="price">$45</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 8 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/white-headphones_1203-7552.jpg" alt="White Headphones">
+        <div class="product-details">
+          <h3>White Headphones</h3>
+          <p>Comfortable and high-quality sound.</p>
+          <span class="price">$39</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 9 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/laptop-accessories_1203-7791.jpg" alt="Laptop Accessories">
+        <div class="product-details">
+          <h3>Laptop Accessories</h3>
+          <p>Essential accessories for productivity.</p>
+          <span class="price">$89</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 10 -->
+      <div class="product-card">
+        <img src="https://img.freepik.com/free-photo/gaming-mouse_1203-7682.jpg" alt="Gaming Mouse">
+        <div class="product-details">
+          <h3>Gaming Mouse</h3>
+          <p>Precision and control for gaming.</p>
+          <span class="price">$35</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Additional Products (Add as many as needed) -->
+      <!-- Product 11-20... -->
+    </div>
+  </div>
+</body>
+</html>

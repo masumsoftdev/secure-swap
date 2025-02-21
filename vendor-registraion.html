@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      width: 100%;
+      max-width: 700px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .form-group input[type="file"] {
+      padding: 5px;
+    }
+
+    .form-group .error {
+      color: red;
+      font-size: 0.8rem;
+    }
+
+    .submit-btn {
+      background: orange;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vendor Registration</h1>
+    <form id="vendor-registration-form">
+      <div class="form-group">
+        <label for="vendor-name">Vendor Name:</label>
+        <input type="text" id="vendor-name" name="vendor_name" placeholder="Enter your business name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="vendor-email">Email Address:</label>
+        <input type="email" id="vendor-email" name="vendor_email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="vendor-phone">Phone Number:</label>
+        <input type="tel" id="vendor-phone" name="vendor_phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="business-type">Business Type:</label>
+        <select id="business-type" name="business_type" required>
+          <option value="" disabled selected>Select your business type</option>
+          <option value="clothing">Clothing</option>
+          <option value="electronics">Electronics</option>
+          <option value="home-appliances">Home Appliances</option>
+          <option value="books">Books</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="business-description">Business Description:</label>
+        <textarea id="business-description" name="business_description" rows="4" placeholder="Tell us about your business" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="business-logo">Business Logo:</label>
+        <input type="file" id="business-logo" name="business_logo" accept="image/*" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm_password" placeholder="Re-enter your password" required>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="submit-btn">Register</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

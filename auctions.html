@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auction Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .auction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .auction-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .auction-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .auction-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .auction-details {
+      padding: 15px;
+    }
+
+    .auction-details h3 {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .auction-details p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .auction-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .current-bid {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #2563eb;
+    }
+
+    .bid-input {
+      display: flex;
+      gap: 10px;
+    }
+
+    .bid-input input[type="number"] {
+      width: 80px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .bid-input button {
+      padding: 5px 10px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .bid-input button:hover {
+      background: #1e4fb8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Live Auction</h1>
+    <div class="auction-grid">
+      <!-- Auction Product 1 -->
+      <div class="auction-card">
+        <img src="https://img.freepik.com/free-photo/elegant-handbag-white-background_1203-7753.jpg" alt="Product 1">
+        <div class="auction-details">
+          <h3>Elegant Handbag</h3>
+          <p>A stylish and durable handbag for every occasion.</p>
+          <div class="auction-info">
+            <span class="current-bid">Current Bid: $50</span>
+          </div>
+          <div class="bid-input">
+            <input type="number" min="51" placeholder="Your Bid">
+            <button>Bid</button>
+          </div>
+        </div>
+      </div>
+      <!-- Auction Product 2 -->
+      <div class="auction-card">
+        <img src="https://img.freepik.com/free-photo/black-sports-shoes-white-background_1203-8594.jpg" alt="Product 2">
+        <div class="auction-details">
+          <h3>Sports Shoes</h3>
+          <p>Lightweight shoes for running and sports activities.</p>
+          <div class="auction-info">
+            <span class="current-bid">Current Bid: $75</span>
+          </div>
+          <div class="bid-input">
+            <input type="number" min="76" placeholder="Your Bid">
+            <button>Bid</button>
+          </div>
+        </div>
+      </div>
+      <!-- Auction Product 3 -->
+      <div class="auction-card">
+        <img src="https://img.freepik.com/free-photo/fashion-sunglasses-white-background_1203-7147.jpg" alt="Product 3">
+        <div class="auction-details">
+          <h3>Fashion Sunglasses</h3>
+          <p>Protect your eyes in style with these sunglasses.</p>
+          <div class="auction-info">
+            <span class="current-bid">Current Bid: $30</span>
+          </div>
+          <div class="bid-input">
+            <input type="number" min="31" placeholder="Your Bid">
+            <button>Bid</button>
+          </div>
+        </div>
+      </div>
+      <!-- Auction Product 4 -->
+      <div class="auction-card">
+        <img src="https://img.freepik.com/free-photo/elegant-watch_1203-6488.jpg" alt="Product 4">
+        <div class="auction-details">
+          <h3>Elegant Watch</h3>
+          <p>Classic design watch for a sophisticated look.</p>
+          <div class="auction-info">
+            <span class="current-bid">Current Bid: $120</span>
+          </div>
+          <div class="bid-input">
+            <input type="number" min="121" placeholder="Your Bid">
+            <button>Bid</button>
+          </div>
+        </div>
+      </div>
+      <!-- Auction Product 5 -->
+      <div class="auction-card">
+        <img src="https://img.freepik.com/free-photo/electronic-gadget_1203-8789.jpg" alt="Product 5">
+        <div class="auction-details">
+          <h3>Smartphone</h3>
+          <p>Latest model with cutting-edge technology.</p>
+          <div class="auction-info">
+            <span class="current-bid">Current Bid: $300</span>
+          </div>
+          <div class="bid-input">
+            <input type="number" min="301" placeholder="Your Bid">
+            <button>Bid</button>
+          </div>
+        </div>
+      </div>
+    <div class="auction-card">
+        <img src="https://img.freepik.com/free-photo/electronic-gadget_1203-8089.jpg" alt="Product 5">
+        <div class="auction-details">
+          <h3>Smartphone</h3>
+          <p>Latest model with cutting-edge technology.</p>
+          <div class="auction-info">
+            <span class="current-bid">Current Bid: $300</span>
+          </div>
+          <div class="bid-input">
+            <input type="number" min="301" placeholder="Your Bid">
+            <button>Bid</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
