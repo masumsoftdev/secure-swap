@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vendor Registration</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -88,6 +89,30 @@
   </style>
 </head>
 <body>
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="nav-logo">SecureSwap</a>
+      <ul class="nav-menu">
+        <li><a href="/secure-swap/index.html">Home</a></li>
+        <li><a href="/secure-swap/shop.html">Shop</a></li>
+        <li><a href="/secure-swap/shop.html">Vendors</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="/secure-swap/vendor-dashboard.html">Profile</a></li>
+        <li><a href="/secure-swap/login.html">Login</a></li>
+        <li><a href="/secure-swap/vendor-registraion.html">Register</a></li>
+        <li style="background-color: orange; color: white; padding: 0px 10px;border-radius: 3px;"><a style="background-color: orange; color: white;" href="/secure-swap/auctions.html" >Live Auctions</a></li>
+      </ul>
+      <div class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Vendors</a>
+      <a href="#">Categories</a>
+      <a href="#">Cart</a>
+      <a href="#">Profile</a>
+    </div>
+  </nav>
   <div class="container">
     <h1>Vendor Registration</h1>
     <form id="vendor-registration-form">
@@ -142,6 +167,9 @@
         <button type="submit" class="submit-btn">Register</button>
       </div>
     </form>
+  </div>
+  <div class="footer-container">
+    <a href="#" class="">All rights reserved by SecureSwap</a>
   </div>
 </body>
 </html>

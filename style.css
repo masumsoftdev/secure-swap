@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+  }
+   
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+ /* Navbar Styles */
+ nav {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+
+  .nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: orange;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-menu li {
+    margin-left: 20px;
+  }
+
+  .nav-menu a {
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-menu a:hover {
+    color: orange;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #f9f9f9;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  .mobile-menu a {
+    margin-bottom: 10px;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .product-details {
+    padding: 15px;
+  }
+
+  .product-details h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .product-details p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  .price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .add-to-cart {
+    background: orange;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .add-to-cart:hover {
+    background: #1e4fb8;
+  }
+
+  .footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    color: #000;
+  }
+  .footer-container a{
+    color: #000;
+  }

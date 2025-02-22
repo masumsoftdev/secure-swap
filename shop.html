@@ -4,94 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 30px;
-    }
-
-    .shop-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .product-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .product-details {
-      padding: 15px;
-    }
-
-    .product-details h3 {
-      font-size: 1.2rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .product-details p {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    .price {
-      font-size: 1rem;
-      font-weight: bold;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    .add-to-cart {
-      background: orange;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .add-to-cart:hover {
-      background: #1e4fb8;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+   <!-- Navbar -->
+   <nav>
+    <div class="nav-container">
+      <a href="#" class="nav-logo">SecureSwap</a>
+      <ul class="nav-menu">
+        <li><a href="/secure-swap/index.html">Home</a></li>
+        <li><a href="/secure-swap/shop.html">Shop</a></li>
+        <li><a href="/secure-swap/shop.html">Vendors</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="/secure-swap/vendor-dashboard.html">Profile</a></li>
+        <li><a href="/secure-swap/login.html">Login</a></li>
+        <li><a href="/secure-swap/vendor-registraion.html">Register</a></li>
+        <li style="background-color: orange; color: white; padding: 0px 10px;border-radius: 3px;"><a style="background-color: orange; color: white;" href="/secure-swap/auctions.html" >Live Auctions</a></li>
+      </ul>
+      <div class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Vendors</a>
+      <a href="#">Categories</a>
+      <a href="#">Cart</a>
+      <a href="#">Profile</a>
+    </div>
+  </nav>
+  <div class="container shop">
     <h1>Shop Our Products</h1>
     <div class="shop-grid">
       <!-- Product 1 -->
@@ -194,190 +135,110 @@
           <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
-      <!-- Additional Products (Add as many as needed) -->
-      <!-- Product 11-20... -->
-    </div>
-    <div class="product-grid">
-      <!-- Product Cards -->
+      <!-- Product 11 -->
       <div class="product-card">
-        <img src="https://img.freepik.com/free-photo/elegant-handbag-white-background_1203-7053.jpg" alt="Product 1">
-        <div class="product-info">
+        <img src="https://img.freepik.com/free-photo/elegant-handbag-white-background_1203-7053.jpg" alt="Elegant Handbag">
+        <div class="product-details">
           <h3>Elegant Handbag</h3>
           <p>Stylish and durable handbag for all occasions.</p>
-          <div class="price">$49.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$49.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
+      <!-- Product 12 -->
       <div class="product-card">
-        <img src="https://img.freepik.com/free-photo/black-sports-shoes-white-background_1203-8594.jpg" alt="Product 2">
-        <div class="product-info">
+        <img src="https://img.freepik.com/free-photo/black-sports-shoes-white-background_1203-8594.jpg" alt="Sports Shoes">
+        <div class="product-details">
           <h3>Sports Shoes</h3>
           <p>Comfortable and lightweight shoes for running.</p>
-          <div class="price">$79.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$79.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
+      <!-- Product 13 -->
       <div class="product-card">
-        <img src="https://img.freepik.com/free-photo/fashion-sunglasses-white-background_1203-7147.jpg" alt="Product 3">
-        <div class="product-info">
+        <img src="https://img.freepik.com/free-photo/fashion-sunglasses-white-background_1203-7147.jpg" alt="Fashion Sunglasses">
+        <div class="product-details">
           <h3>Fashion Sunglasses</h3>
           <p>Protect your eyes in style with these sunglasses.</p>
-          <div class="price">$29.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$29.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
+      <!-- Product 14 -->
       <div class="product-card">
-        <img src="https://img.freepik.com/free-photo/elegant-watch_1203-6488.jpg" alt="Product 4">
-        <div class="product-info">
+        <img src="https://img.freepik.com/free-photo/elegant-watch_1203-6488.jpg" alt="Elegant Watch">
+        <div class="product-details">
           <h3>Elegant Watch</h3>
           <p>Classic watch for a sophisticated look.</p>
-          <div class="price">$129.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$129.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
+      <!-- Product 15 -->
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1512499617640-c2f999018b72" alt="Wireless Headphones">
-        <div class="product-info">
+        <div class="product-details">
           <h3>Wireless Headphones</h3>
           <p>Experience high-quality sound without the wires.</p>
-          <div class="price">$59.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$59.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
-      
+      <!-- Product 16 -->
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Smartphone">
-        <div class="product-info">
+        <div class="product-details">
           <h3>Smartphone</h3>
           <p>Stay connected with the latest technology.</p>
-          <div class="price">$699.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$699.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
-      
+      <!-- Product 17 -->
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Bluetooth Speaker">
-        <div class="product-info">
+        <div class="product-details">
           <h3>Bluetooth Speaker</h3>
           <p>Portable speaker with exceptional sound quality.</p>
-          <div class="price">$45.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$45.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
-      
+      <!-- Product 18 -->
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1519183071298-a2962f7b9d3e" alt="Digital Camera">
-        <div class="product-info">
+        <div class="product-details">
           <h3>Digital Camera</h3>
           <p>Capture your moments with high-resolution photos.</p>
-          <div class="price">$499.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$499.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
-      
+      <!-- Product 19 -->
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c" alt="Laptop">
-        <div class="product-info">
+        <div class="product-details">
           <h3>Laptop</h3>
           <p>Powerful performance in a sleek design.</p>
-          <div class="price">$899.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$899.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
-      
+      <!-- Product 20 -->
       <div class="product-card">
         <img src="https://images.unsplash.com/photo-1512499617640-c2f999018b72" alt="Smartwatch">
-        <div class="product-info">
+        <div class="product-details">
           <h3>Smartwatch</h3>
           <p>Keep track of your health and notifications.</p>
-          <div class="price">$199.99</div>
-          <a href="#" class="btn">Add to Cart</a>
+          <span class="price">$199.99</span>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Tablet">
-        <div class="product-info">
-          <h3>Tablet</h3>
-          <p>Portable and powerful for work and play.</p>
-          <div class="price">$329.99</div>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Gaming Console">
-        <div class="product-info">
-          <h3>Gaming Console</h3>
-          <p>Next-generation gaming experience.</p>
-          <div class="price">$499.99</div>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1519183071298-a2962f7b9d3e" alt="Fitness Tracker">
-        <div class="product-info">
-          <h3>Fitness Tracker</h3>
-          <p>Monitor your activity and health metrics.</p>
-          <div class="price">$79.99</div>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c" alt="E-Reader">
-        <div class="product-info">
-          <h3>E-Reader</h3>
-          <p>Carry thousands of books in one device.</p>
-          <div class="price">$129.99</div>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1512499617640-c2f999018b72" alt="Portable Charger">
-        <div class="product-info">
-          <h3>Portable Charger</h3>
-          <p>Keep your devices powered on the go.</p>
-          <div class="price">$25.99</div>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Wireless Mouse">
-        <div class="product-info">
-          <h3>Wireless Mouse</h3>
-          <p>Ergonomic design for comfortable use.</p>
-          <div class="price">$19.99</div>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Mechanical Keyboard">
-        <div class="product-info">
-          <h3>Mechanical Keyboard</h3>
-          <p>Responsive keys for efficient typing.</p>
-          <div class="price">$89.99</div>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1519183071298-a2962f7b9d3e" alt="External Hard Drive">
-        <div class="product-info">
-          <h3>External Hard Drive</h3>
-          <p>Expand your storage capacity easily.</p>
-          <div class="price">$59.99</div>
-          <a href="#" class="btn">Add to Cart</a>
-        </div>
-      </div>
-      <!-- Additional Products -->
-      <!-- Repeat similar structure for 16 more products -->
-      <!-- You can use the same Freepik placeholders or others from the source -->
     </div>
+  </div>
+  <div class="footer-container">
+    <a href="#" class="">All rights reserved by SecureSwap</a>
   </div>
 </body>
 </html>
